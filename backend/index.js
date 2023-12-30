@@ -5,6 +5,9 @@ import { Book } from "./models/bookModel.js";
 
 const app = express();
 
+// Middleware for parsing req body
+app.use(express.json());
+
 // route to save a new book
 app.post("/books", async (req, res) => {
   try {
